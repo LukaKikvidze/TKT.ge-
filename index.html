@@ -3,26 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&family=Noto+Serif+Georgian:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
+    <!-- Header Section -->
+    <header class="header">
         <div class="in-header">
-            <div class="logo"><img src="/images/Logo.jpg"></div>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="/images/Logo.jpg" alt="Logo">
+            </div>
+
+            <!-- Search Bar -->
             <div class="search">
-                <input type="text" placeholder="ძებნა"><i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="ძებნა">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
+
+            <!-- Buttons -->
             <div class="buttons">
-                <button id="language"><i class="fa-solid fa-globe"></i> ქარ</button>
-                <button id="sing-in"><i class="fa-regular fa-user"></i> შესვლა</button>
+                <button id="language">
+                    <i class="fa-solid fa-globe"></i>ქარ
+                </button>
+                <button id="sign-in">
+                    <i class="fa-regular fa-user"></i>შესვლა
+                </button>
             </div>
         </div>
-        <div class="down-of-header">
-            <button><i class="fa-solid fa-qrcode"></i> კატეგორიები</button>
+    </header>
+
+    <!-- Categories Dropdown -->
+    <section class="categories-dropdown">
+        <button>
+            <i class="fa-solid fa-qrcode"></i>
+            <p>კატეგორიები</p>
+        </button>
+        <div class="categories-dropdown-content">
+            <a href="#">მუსიკა/კონცერტი</a>
+            <a href="#">კინო</a>
+            <a href="#">რკინიგზა</a>
+            <a href="#">ტრანსპორტი</a>
+            <a href="#">თეატრი</a>
+            <a href="#">ოპერა</a>
+            <a href="#">სპორტი</a>
+            <a href="#">ზღვა</a>
+            <a href="#">ფესტივალი</a>
+            <a href="#">საბავშვო</a>
+            <a href="#">კონფერენცია</a>
+            <a href="#">სტენდაფი</a>
+            <a href="#">ტურიზმი</a>
+            <a href="#">ჰობი</a>
+            <a href="#">მასტერკლასი</a>
+            <a href="#">მუზეუმი</a>
+            <a href="#">საერთაშორისო</a>
         </div>
+    </section>
+
+    <section class="categories-slider-wrapper">
+        <!-- Categories Dropdown -->
+        <div class="categories-dropdown">
+            <button>
+                <i class="fa-solid fa-qrcode"></i>
+                <p>კატეგორიები</p>
+            </button>
+            <div class="categories-dropdown-content">
+                <a href="#">მუსიკა/კონცერტი</a>
+                <a href="#">კინო</a>
+                <a href="#">რკინიგზა</a>
+                <a href="#">ტრანსპორტი</a>
+                <a href="#">თეატრი</a>
+                <a href="#">ოპერა</a>
+                <a href="#">სპორტი</a>
+                <a href="#">ზღვა</a>
+                <a href="#">ფესტივალი</a>
+                <a href="#">საბავშვო</a>
+                <a href="#">კონფერენცია</a>
+                <a href="#">სტენდაფი</a>
+                <a href="#">ტურიზმი</a>
+                <a href="#">ჰობი</a>
+                <a href="#">მასტერკლასი</a>
+                <a href="#">მუზეუმი</a>
+                <a href="#">საერთაშორისო</a>
+            </div>
+        </div>
+    
+        <!-- Slider Section -->
+        <div class="slider-container">
+            <button class="slide-btn" id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <button class="slider-item"><img src="images/icons/music.png" alt="Music">მუსიკა/კონცერტი</button>
+                    <button class="slider-item"><img src="images/icons/cinema.png" alt="Cinema">კინო</button>
+                    <button class="slider-item"><img src="images/icons/railway.png" alt="Railway">რკინიგზა</button>
+                    <button class="slider-item"><img src="images/icons/transport.png" alt="Transport">ტრანსპორტი</button>
+                    <button class="slider-item"><img src="images/icons/theatre.png" alt="Theater">თეატრი</button>
+                    <button class="slider-item"><img src="images/icons/opera.png" alt="Opera">ოპერა</button>
+                    <button class="slider-item"><img src="images/icons/sport.png" alt="Sport">სპორტი</button>
+                    <button class="slider-item"><img src="images/icons/sea.png" alt="Sea">ზღვა</button>
+                    <button class="slider-item"><img src="images/icons/kids.png" alt="Children">საბავშვო</button>
+                    <button class="slider-item"><img src="images/icons/conferences.png" alt="Conference">კონფერენცია</button>
+                    <button class="slider-item"><img src="images/icons/standup.png" alt="Standup">სტენდაფი</button>
+                    <button class="slider-item"><img src="images/icons/turism.png" alt="Tourism">ტურიზმი</button>
+                    <button class="slider-item"><img src="images/icons/hobby.png" alt="Hobby">ჰობი</button>
+                    <button class="slider-item"><img src="images/icons/masterclass.png" alt="Masterclass">მასტერკლასი</button>
+                    <button class="slider-item"><img src="images/icons/museum.png" alt="Museum">მუზეუმი</button>
+                </div>
+            </div>
+            <button class="slide-btn" id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+    <div class="plane-tkt">
+        <button>
+            <img src="images/icons/fly-icon.png" alt="Plane">ფრენა
+        </button>
+    </div>
+    <div class="main">
+        <p>Hello</p>
     </div>
     
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
