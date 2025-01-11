@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&family=Noto+Serif+Georgian:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
     <!-- Header Section -->
     <header class="header">
         <div class="in-header">
@@ -21,16 +29,16 @@
 
             <!-- Search Bar -->
             <div class="search">
-                <input type="text" placeholder="ძებნა">
+                <input type="text" id="search-placeholder" placeholder="ძებნა">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
 
             <!-- Buttons -->
             <div class="buttons">
-                <button id="language">
+                <button id="language" onclick="toggleLanguage()">
                     <i class="fa-solid fa-globe"></i>ქარ
-                </button>
-                <button id="sign-in">
+                </button>                
+                <button id="sign-in" id="sign-in-text">
                     <i class="fa-regular fa-user"></i>შესვლა
                 </button>
             </div>
@@ -65,63 +73,61 @@
     </section>
 
     <section class="categories-slider-wrapper">
-        <!-- Categories Dropdown -->
-        <div class="categories-dropdown">
-            <button>
-                <i class="fa-solid fa-qrcode"></i>
-                <p>კატეგორიები</p>
-            </button>
-            <div class="categories-dropdown-content">
-                <a href="#">მუსიკა/კონცერტი</a>
-                <a href="#">კინო</a>
-                <a href="#">რკინიგზა</a>
-                <a href="#">ტრანსპორტი</a>
-                <a href="#">თეატრი</a>
-                <a href="#">ოპერა</a>
-                <a href="#">სპორტი</a>
-                <a href="#">ზღვა</a>
-                <a href="#">ფესტივალი</a>
-                <a href="#">საბავშვო</a>
-                <a href="#">კონფერენცია</a>
-                <a href="#">სტენდაფი</a>
-                <a href="#">ტურიზმი</a>
-                <a href="#">ჰობი</a>
-                <a href="#">მასტერკლასი</a>
-                <a href="#">მუზეუმი</a>
-                <a href="#">საერთაშორისო</a>
-            </div>
-        </div>
-    
-        <!-- Slider Section -->
-        <div class="slider-container">
-            <button class="slide-btn" id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <button class="slider-item"><img src="images/icons/music.png" alt="Music">მუსიკა/კონცერტი</button>
-                    <button class="slider-item"><img src="images/icons/cinema.png" alt="Cinema">კინო</button>
-                    <button class="slider-item"><img src="images/icons/railway.png" alt="Railway">რკინიგზა</button>
-                    <button class="slider-item"><img src="images/icons/transport.png" alt="Transport">ტრანსპორტი</button>
-                    <button class="slider-item"><img src="images/icons/theatre.png" alt="Theater">თეატრი</button>
-                    <button class="slider-item"><img src="images/icons/opera.png" alt="Opera">ოპერა</button>
-                    <button class="slider-item"><img src="images/icons/sport.png" alt="Sport">სპორტი</button>
-                    <button class="slider-item"><img src="images/icons/sea.png" alt="Sea">ზღვა</button>
-                    <button class="slider-item"><img src="images/icons/kids.png" alt="Children">საბავშვო</button>
-                    <button class="slider-item"><img src="images/icons/conferences.png" alt="Conference">კონფერენცია</button>
-                    <button class="slider-item"><img src="images/icons/standup.png" alt="Standup">სტენდაფი</button>
-                    <button class="slider-item"><img src="images/icons/turism.png" alt="Tourism">ტურიზმი</button>
-                    <button class="slider-item"><img src="images/icons/hobby.png" alt="Hobby">ჰობი</button>
-                    <button class="slider-item"><img src="images/icons/masterclass.png" alt="Masterclass">მასტერკლასი</button>
-                    <button class="slider-item"><img src="images/icons/museum.png" alt="Museum">მუზეუმი</button>
+        <div class="categories-slider-container">
+            <!-- Categories Dropdown -->
+            <div class="categories-dropdown">
+                <button>
+                    <i class="fa-solid fa-qrcode"></i>
+                    <p>კატეგორიები</p>
+                </button>
+                <div class="categories-dropdown-content">
+                    <a href="#">მუსიკა/კონცერტი</a>
+                    <a href="#">კინო</a>
+                    <a href="#">რკინიგზა</a>
+                    <a href="#">ტრანსპორტი</a>
+                    <a href="#">თეატრი</a>
+                    <a href="#">ოპერა</a>
+                    <a href="#">სპორტი</a>
+                    <a href="#">ზღვა</a>
+                    <a href="#">ფესტივალი</a>
+                    <a href="#">საბავშვო</a>
+                    <a href="#">კონფერენცია</a>
+                    <a href="#">სტენდაფი</a>
+                    <a href="#">ტურიზმი</a>
+                    <a href="#">ჰობი</a>
+                    <a href="#">მასტერკლასი</a>
+                    <a href="#">მუზეუმი</a>
+                    <a href="#">საერთაშორისო</a>
                 </div>
             </div>
-            <button class="slide-btn" id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    
+            <!-- Slider Section -->
+            <div class="slider-container">
+                <button class="slide-btn" id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <button class="slider-item"><img src="images/icons/music.png" alt="Music">მუსიკა/კონცერტი</button>
+                        <button class="slider-item"><img src="images/icons/cinema.png" alt="Cinema">კინო</button>
+                        <button class="slider-item"><img src="images/icons/railway.png" alt="Railway">რკინიგზა</button>
+                        <button class="slider-item"><img src="images/icons/transport.png" alt="Transport">ტრანსპორტი</button>
+                        <button class="slider-item"><img src="images/icons/theatre.png" alt="Theater">თეატრი</button>
+                        <button class="slider-item"><img src="images/icons/opera.png" alt="Opera">ოპერა</button>
+                        <button class="slider-item"><img src="images/icons/sport.png" alt="Sport">სპორტი</button>
+                    </div>
+                </div>
+                <button class="slide-btn" id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
         </div>
     </section>
+    
+    <!-- Flight Button -->
     <div class="plane-tkt">
         <button>
             <img src="images/icons/fly-icon.png" alt="Plane">ფრენა
         </button>
     </div>
+
+    <!-- Main Container -->
     <div class="main">
         <div class="main-slider">
             <button class="arrow left" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
@@ -138,11 +144,108 @@
             </div>
             <button class="arrow right" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
-    </div>
-    
-    
 
-    <!-- Scripts -->
+        <!-- Icon Button Container -->
+        <div class="icon-button-container">
+            <a href="icons/kino.webp" class="icon-button">
+                <img src="/images/icons/kino.webp" alt="Icon">
+                <span>კინო</span>
+            </a>
+            <a href="#" class="icon-button">
+                <img src="/images/icons/gabriadze.webp" alt="Icon">
+                <span>გაბრიელის თეატრი</span>
+            </a>
+            <a href="#" class="icon-button">
+                <img src="/images/icons/ragbi.webp" alt="Icon">
+                <span>რაგბი</span>
+            </a>
+            <a href="#" class="icon-button">
+                <img src="/images/icons/Sailling.webp" alt="Icon">
+                <span>Georgian Sailing Club</span>
+            </a>
+            <a href="#" class="icon-button">
+                <img src="/images/icons/mtis kurorti.webp" alt="Icon">
+                <span>მთის კურორტი</span>
+            </a>
+            <a href="#" class="icon-button">
+                <img src="/images/icons/vaso abashidze.webp" alt="Icon">
+                <span>ვასო აბაშიძის სახელობის...</span>
+            </a>
+            <a href="#" class="icon-button">
+                <img src="/images/icons/saertashoriso.webp" alt="Icon">
+                <span>საერთაშორისო ღონისძიებები</span>
+            </a>
+            <a href="#" class="icon-button">
+                <img src="/images/icons/omnibus.webp" alt="Icon">
+                <span>Omnibus</span>
+            </a>
+        </div>
+        <br>
+        <br>
+
+        <!-- Popular Slide -->
+        <div class="popular-container">
+            <h1 class="popular-title">პოპულარული</h1>
+            <div class="popular-slider-container">
+                <div class="popular-events-slider">
+                    <!-- Event Cards -->
+                    <div class="popular-event-card">
+                        <div class="popular-card-image">
+                            <img src="images/icons/viavldi.webp" alt="Vivaldi">
+                            <div class="date-badge">25 იან</div>
+                        </div>
+                        <div class="event-info">
+                            <h2 class="title">Vivaldi: The Four Seasons</h2>
+                            <p class="venue">თბილისის საკონცერტო დარბაზი</p>
+                            <p class="time">მაისი, 18:00</p>
+                        </div>
+                    </div>
+
+                    <div class="popular-event-card">
+                        <div class="popular-card-image">
+                            <img src="images/icons/bela.webp" alt="Bela">
+                            <div class="date-badge">13 თებ</div>
+                        </div>
+                        <div class="event-info">
+                            <h2 class="title">ბელა და მისი მეგობრები</h2>
+                            <p class="venue">თბილისის სახელმწიფო კონსერვატორია</p>
+                            <p class="time">კვირა, 18:00</p>
+                        </div>
+                    </div>
+
+                    <div class="popular-event-card">
+                        <div class="popular-card-image">
+                            <img src="images/icons/harout.webp" alt="Harout">
+                            <div class="date-badge">14 თებ</div>
+                        </div>
+                        <div class="event-info">
+                            <h2 class="title">Harout Pamboukjian (Dzax Harut)</h2>
+                            <p class="venue">თბილისის საოპერის სასახლე</p>
+                            <p class="time">პარასკევი, 20:00</p>
+                        </div>
+                    </div>
+
+                    <div class="popular-event-card">
+                        <div class="popular-card-image">
+                            <img src="images/icons/evro.webp" alt="Eurobank Cup">
+                            <div class="date-badge">02 მარ</div>
+                        </div>
+                        <div class="event-info">
+                            <h2 class="title">ევროპაბანკის თასი</h2>
+                            <p class="venue">თბილისის საოპერის სასახლე</p>
+                            <p class="time">კვირა, 14:00</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <button class="nav-button prev">←</button>
+                <button class="nav-button next">→</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
     <script src="script.js"></script>
+
 </body>
 </html>

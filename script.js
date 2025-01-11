@@ -80,3 +80,98 @@ function prevSlide() {
         updateSliderPosition();
     }
 }
+
+//Language
+
+// JSON data for translation
+
+    // Define Georgian and English translations
+    const translations = {
+        ka: {
+            "search-placeholder": "ძებნა",
+            "language": "ქარ",
+            "sign-in": "შესვლა",
+            "categories": "კატეგორიები",
+            "music-concert": "მუსიკა/კონცერტი",
+            "cinema": "კინო",
+            "railway": "რკინიგზა",
+            "transport": "ტრანსპორტი",
+            "theater": "თეატრი",
+            "opera": "ოპერა",
+            "sport": "სპორტი",
+            "festival": "ფესტივალი",
+            "childrens": "საბავშვო",
+            "conference": "კონფერენცია",
+            "standup": "სტენდაფი",
+            "tourism": "ტურიზმი",
+            "hobby": "ჰობი",
+            "masterclass": "მასტერკლასი",
+            "museum": "მუზეუმი",
+            "international": "საერთაშორისო"
+        },
+        en: {
+            "search-placeholder": "Search",
+            "language": "EN",
+            "sign-in": "Sign In",
+            "categories": "Categories",
+            "music-concert": "Music/Concert",
+            "cinema": "Cinema",
+            "railway": "Railway",
+            "transport": "Transport",
+            "theater": "Theater",
+            "opera": "Opera",
+            "sport": "Sport",
+            "festival": "Festival",
+            "childrens": "Children's",
+            "conference": "Conference",
+            "standup": "Standup",
+            "tourism": "Tourism",
+            "hobby": "Hobby",
+            "masterclass": "Masterclass",
+            "museum": "Museum",
+            "international": "International"
+        }
+    };
+
+    // Get all elements to translate
+    const elementsToTranslate = {
+        "search-placeholder": document.getElementById("search-placeholder"),
+        "language": document.getElementById("language"),
+        "sign-in": document.getElementById("sign-in"),
+        "categories": document.querySelector('.categories-dropdown button p'),
+        "music-concert": document.querySelector('.categories-dropdown-content a:nth-child(1)'),
+        "cinema": document.querySelector('.categories-dropdown-content a:nth-child(2)'),
+        "railway": document.querySelector('.categories-dropdown-content a:nth-child(3)'),
+        "transport": document.querySelector('.categories-dropdown-content a:nth-child(4)'),
+        "theater": document.querySelector('.categories-dropdown-content a:nth-child(5)'),
+        "opera": document.querySelector('.categories-dropdown-content a:nth-child(6)'),
+        "sport": document.querySelector('.categories-dropdown-content a:nth-child(7)'),
+        "festival": document.querySelector('.categories-dropdown-content a:nth-child(8)'),
+        "childrens": document.querySelector('.categories-dropdown-content a:nth-child(9)'),
+        "conference": document.querySelector('.categories-dropdown-content a:nth-child(10)'),
+        "standup": document.querySelector('.categories-dropdown-content a:nth-child(11)'),
+        "tourism": document.querySelector('.categories-dropdown-content a:nth-child(12)'),
+        "hobby": document.querySelector('.categories-dropdown-content a:nth-child(13)'),
+        "masterclass": document.querySelector('.categories-dropdown-content a:nth-child(14)'),
+        "museum": document.querySelector('.categories-dropdown-content a:nth-child(15)'),
+        "international": document.querySelector('.categories-dropdown-content a:nth-child(16)')
+    };
+
+    // Function to toggle language
+    function toggleLanguage() {
+        const currentLang = document.documentElement.lang === 'ka' ? 'ka' : 'en';
+        const newLang = currentLang === 'ka' ? 'en' : 'ka';
+        document.documentElement.lang = newLang;
+        
+        // Update the text content of elements
+        for (let key in elementsToTranslate) {
+            const element = elementsToTranslate[key];
+            if (element) {
+                element.textContent = translations[newLang][key];
+            }
+        }
+    }
+
+    // Set the initial language
+    document.documentElement.lang = 'ka'; // Default language is Georgian
+    toggleLanguage(); // Load the initial language
