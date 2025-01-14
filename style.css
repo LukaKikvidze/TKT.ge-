@@ -91,7 +91,6 @@ body {
     gap: 10px;
     align-items: center;
 }
-
 #language, #sign-in {
     background-color: transparent;
     padding: 5px 15px;
@@ -102,8 +101,11 @@ body {
     font-weight: 500;
     cursor: pointer;
     display: flex;
+    color: black;
     align-items: center;
     gap: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* სლაიდის ეფექტი ფონდის შეცვლაზე */
 }
 
 #language {
@@ -112,6 +114,20 @@ body {
 
 #sign-in {
     width: 120px;
+    font-weight: 700;
+}
+
+#sign-in:hover {
+    background-color: #f0f0f0;
+}
+
+
+#sign-in i {
+    margin-right: 5px;
+}
+
+#language:hover{
+    background-color: #e0e0e0;
 }
 
 /* Dropdown Section */

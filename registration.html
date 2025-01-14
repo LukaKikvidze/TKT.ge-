@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="email">ელ. ფოსტა:</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="password">პაროლი:</label>
+        <input type="password" id="password" required><br><br>
+    
+        <label for="confirmPassword">დაადასტურეთ პაროლი:</label>
+        <input type="password" id="confirmPassword" required><br><br>
+    
+        <label for="registerDate">რეგისტრაციის თარიღი:</label>
+        <input type="date" id="registerDate" required><br><br>
+    
+        <label for="username">მომხარებლის სახელი:</label>
+        <input type="text" id="username" required><br><br>
+    
+        <label for="country">ქვეყანა:</label>
+        <input type="text" id="country" required><br><br>
+    
+        <label for="city">ქალაქი:</label>
+        <input type="text" id="city" required><br><br>
+    
+        <label for="phone">მობილურის ნომერი:</label>
+        <input type="tel" id="phone" required><br><br>
+    
+        <button type="submit">რეგისტრაცია</button>
+    </form>
+    
+    <div id="errorMessages" style="color: red;"></div>
+    <script src="registration.js"></script>
+</body>
+</html>
