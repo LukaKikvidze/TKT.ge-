@@ -4,19 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Font Awesome -->
+    <title>ყველა ბილეთი ერთ სივრცეში | ონლაინ ბილეთები | TKT.GE</title>
+    <link rel="Icon" href="images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&family=Noto+Serif+Georgian:wght@100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <!-- Header Section -->
@@ -27,7 +22,7 @@
                 <img src="/images/Logo.jpg" alt="Logo">
             </div>
 
-            <!-- Search Bar -->
+            <!-- Search -->
             <div class="search">
                 <input type="text" id="search-placeholder" placeholder="ძებნა">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -35,7 +30,7 @@
 
             <!-- Buttons -->
             <div class="buttons">
-                <button id="language" onclick="toggleLanguage()">
+                <button id="language" onclick="changeLanguage()">
                     <i class="fa-solid fa-globe"></i>ქარ
                 </button>                
             
@@ -104,7 +99,7 @@
                 </div>
             </div>
     
-            <!-- Slider Section -->
+            <!-- Slider -->
             <div class="slider-container">
                 <button class="slide-btn" id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
                 <div class="slider-wrapper">
@@ -123,7 +118,6 @@
         </div>
     </section>
     
-    <!-- Flight Button -->
     <div class="plane-tkt">
         <button>
             <img src="images/icons/fly-icon.png" alt="Plane">ფრენა
@@ -247,8 +241,85 @@
         </div>
     </div>
 
-    <!-- Custom JS -->
+    <!-- JS -->
     <script src="script.js"></script>
 
+    <!--Footer-->
+    <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h4>კატეგორიები</h4>
+            <ul>
+              <li>მუსიკა / კონცერტი</li>
+              <li>თეატრი</li>
+              <li>ოპერა</li>
+              <li>სპორტი</li>
+              <li>გამოფენები</li>
+              <li>ფესტივალი</li>
+              <li>საოჯახო</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>კომპანია</h4>
+            <ul>
+              <li>კონტაქტი</li>
+              <li>სტატუსები</li>
+              <li>ტარიფები</li>
+              <li>პობი</li>
+              <li>მასწავლებლური</li>
+              <li>მუხები</li>
+              <li>ძეგვა</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>დახმარება</h4>
+            <ul>
+              <li>ონლაინ დახმარება</li>
+              <li>ანგარიში აღდგენა</li>
+              <li>შეფასება</li>
+              <li>ორიენტატორების სია</li>
+              <li>ბილეთების დეტალური კოდები</li>
+              <li>+995 32 2195577</li>
+              <li>support@tkt.ge</li>
+            </ul>
+            <div class="social-media">
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>კინო</h4>
+            <ul>
+              <li>კინო თეატრი ამირანი</li>
+              <li>კავკას ბულვარი ბაუმი</li>
+              <li>კავკას თბილისი მოლი</li>
+              <li>კავკას ისთ ფოინი</li>
+              <li>ივერია ხაშური</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>მატარებელი</h4>
+            <ul>
+              <li>თბილისი - ბათუმი</li>
+              <li>თბილისი - ფოთი</li>
+              <li>თბილისი - ქუთაისი</li>
+              <li>თბილისი - ზუგდიდი</li>
+              <li>თბილისი - ოზურგეთი</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>ფრენა</h4>
+            <ul>
+              <li>ავიაბილეთები</li>
+              <li>თბილისი - სტამბოლო</li>
+              <li>თბილისი - ბერლინი</li>
+              <li>თბილისი - პარიზი</li>
+              <li>თბილისი - ბარსელონა</li>
+              <li>თბილისი - ბაქო</li>
+              <li>განდეომედითი ლოჯისტიკონი</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>

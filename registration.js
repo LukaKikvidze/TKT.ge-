@@ -1,18 +1,16 @@
-function validateForm() {
+function confirm() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
     const errorMessages = document.getElementById("errorMessages");
     errorMessages.innerHTML = "";
 
-    // ელ. ფოსტის ვალიდაცია
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!email.match(emailPattern)) {
         errorMessages.innerHTML += "<li>გთხოვთ, შეიყვანოთ სწორი ელ. ფოსტა.</li>";
         return false;
     }
 
-    // პაროლის სიმძლავრის შემოწმება
     const passwordStrength = checkPasswordStrength(password);
     if (passwordStrength === "weak") {
         errorMessages.innerHTML += "<li>პაროლი ძალიან სუსტია. პაროლი უნდა შეიცავდეს მხოლოდ ინგლისურ ასოებს.</li>";
@@ -23,10 +21,8 @@ function validateForm() {
         errorMessages.innerHTML += "<li>პაროლი საშუალო სიმძლავრისაა. დაამატეთ სიმბოლოები.</li>";
         return false;
     } else if (passwordStrength === "strong") {
-        // ძლიერი პაროლი
     }
 
-    // პაროლის შესაბამისობა
     if (password !== confirmPassword) {
         errorMessages.innerHTML += "<li>პაროლები არ ემთხვევა.</li>";
         return false;
