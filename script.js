@@ -28,8 +28,12 @@ updateSlider();
 const sliderContainer = document.getElementById('sliderContainer');
 const slides = document.querySelectorAll('.main-slider-item');
 const slideWidth = slides[0].offsetWidth + 20;
+<<<<<<< HEAD
 
 let currentIndex = 1; 
+=======
+let currentIndex = 1;
+>>>>>>> b85979e2f2016ac619544113b04e4d035bbe95a6
 
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
@@ -37,6 +41,10 @@ const lastClone = slides[slides.length - 1].cloneNode(true);
 sliderContainer.appendChild(firstClone);
 sliderContainer.insertBefore(lastClone, slides[0]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b85979e2f2016ac619544113b04e4d035bbe95a6
 sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 
 function updateSliderPosition() {
@@ -46,13 +54,22 @@ function updateSliderPosition() {
 
 sliderContainer.addEventListener('transitionend', () => {
     if (currentIndex === 0) {
+<<<<<<< HEAD
         sliderContainer.style.transition = 'none';
+=======
+        sliderContainer.style.transition = 'none'; 
+>>>>>>> b85979e2f2016ac619544113b04e4d035bbe95a6
         currentIndex = slides.length;
         sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
     if (currentIndex === slides.length + 1) {
+<<<<<<< HEAD
         sliderContainer.style.transition = 'none';
         currentIndex = 1;
+=======
+        sliderContainer.style.transition = 'none'; 
+        currentIndex = 1; 
+>>>>>>> b85979e2f2016ac619544113b04e4d035bbe95a6
         sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
 });
@@ -71,6 +88,7 @@ function prevSlide() {
     }
 }
 
+<<<<<<< HEAD
 //Language
 const translations = {
         ka: {
@@ -104,3 +122,6 @@ const translations = {
 
     document.documentElement.lang = 'ka';
     changeLanguage();
+=======
+
+>>>>>>> b85979e2f2016ac619544113b04e4d035bbe95a6
